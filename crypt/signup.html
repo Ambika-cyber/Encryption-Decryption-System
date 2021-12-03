@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--eel javascript-->
+  <script type="text/javascript" src="../eel.js"></script>
+  <script src="javascript/script.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/sign.css">
+  <title>Encryption-Decryption</title>
+</head>
+
+<body>
+  <h1></h1>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <div>
+
+    <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> -->
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <a class="navbar-brand" href="/"><b>E-D-Cryption</b></a>
+
+      <h5>Welcome to Encryption-Decryption System</h5>
+
+      <div class="topnav">
+        <a class="active" href="#home">Home</a>
+
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+
+  </div>
+  <div class="center">
+    <h1>SignUp</h1>
+    <form id="myform">
+      <div class="txt_field">
+        <input type="text" id="name" required> <span></span> <label>Enter Name</label>
+      </div>
+      <div class="txt_field">
+        <input type="email" id="eid" required> <span></span> <label>Enter Email Id</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" id="passw" required> <span></span><label>Create Password</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" id="cpassw" required> <span></span><label>Confirm Password</label>
+      </div>
+
+      <input type="submit" id="btn" value="SignUp" onclick="signup()">
+      <!-- <div class="signup_link"> -->
+      <span></span>Already have an account? <a href="index.html">Login</a>
+      <br>
+      <br>
+      <center>
+        <p id="p2" style="color: brown;"></p>
+      </center>
+    </form>
+  </div>
+
+  <!-- <p>Image with 50% opacity:</p>
+<img src="./img3.jpg" alt="Forest" class="img3" width="170" height="100"> -->
+</body>
+
+</html>
+<script>
+  function signup() {
+    var form = document.getElementById("myform");
+    function handleForm(event) { event.preventDefault(); }
+
+    form.addEventListener('submit', handleForm);
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("eid").value;
+    var passw = document.getElementById("passw").value;
+    var cpassw = document.getElementById("cpassw").value;
+
+    eel.register(name, email, passw, cpassw)(callback);
+  }
+
+  function callback(val) {
+    if (val == "1") {
+      document.getElementById("p2").innerHTML = "Sign Up done";
+      location.href = "index.html"
+    }
+    if (val == "0") {
+      document.getElementById("p2").innerHTML = "Password and Confirm Password must be same!";
+
+    }
+    if (val == "2") {
+      document.getElementById("p2").innerHTML = "Account already exist!";
+
+    }
+  }
+</script>

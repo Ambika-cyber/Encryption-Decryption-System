@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+      background-color: rgb(105, 188, 221); 
+       background-image: url('pics/img4.jpg'); 
+      height: 800px;  /* set a specified height */
+      width: 400px; 
+    background-position: center; /* Center the image*/
+    background-repeat: no-repeat; /* Do not repeat the image */
+     background-size: cover; /*Resize the background image to cover the entire container */ 
+   height: 100vh;
+   overflow: hidden;
+  }
+  
+  
+header img{
+  position: relative;
+  height: 100px;
+
+  
+}
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+      float: left;
+      color:rgb(14, 10, 73);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+  
+    /* Change the color of links on hover */
+  .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  
+    
+  /* Add a color to the active/current link */
+  .topnav a.active {
+      background-color: #6658be;
+      color: white;
+    }
+    h5{
+        font-family:'Times New Roman', Times, serif;
+        
+        text-align: center;
+        font-weight: bold;
+    }
+  
+   .center2{
+     position: absolute;
+     top:55%;
+     left:40%;
+     width:400px;
+     height: 500px;
+     transform: translate(-20%,-50%);
+     background: white;
+     border-radius: 10px;
+     font-family: 'Times New Roman', Times, serif;
+      }
+      .center2 h1{
+        text-align: center;
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid silver;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+        color:  #6658be;
+  
+      }
+  
+      
+  
+

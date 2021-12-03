@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--eel javascript-->
+  <script type="text/javascript" src="/eel.js"></script>
+  <script src="javascript/script.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/encypt.css">
+  <title>Encryption</title>
+  <h2>Encryption</h2>
+</head>
+
+<body>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <div>
+
+    <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> -->
+
+    <!-- <nav class="navbar fixed-top navbar-light bg-light">
+      <a class="navbar-brand" href="/"><b>E-D-Cryption</b></a> -->
+    <header>
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <img src="css/pics/logo.png" height="100px">
+        <center>
+          <h5>AES (Advance Encryption Standard) Cipher System</h5>
+        </center>
+        <div class="topnav">
+          <a  href="./crypt.html">ED-crypt</a>
+
+          <a href="index.html">LogOut</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- <center>
+        <h5>AES (Advance Encryption Standard) Cipher System</h5>
+      </center>
+
+      <div class="topnav">
+        <a class="active" href="./crypt.html">ED-crypt</a>
+
+        <a href="index.html">LogOut</a> -->
+    <!-- </div> -->
+
+
+    <body>
+
+      <div class="center">
+        <h4>Do Encryption</h4>
+        <form id="myform1">
+
+          <div class="center">
+
+            <!-- first box -->
+            <div class="row">
+              <div class="col-25">
+                <label id="plain_text" for="subject">Enter Text</label>
+              </div>
+              <div class="col-75">
+                <textarea id="msg1" name="subject" placeholder="Enter plain_text to convert into Encrypted text..."
+                  style="height:200px"></textarea>
+              </div>
+            </div>
+            <br>
+            <!-- key box -->
+            <div class="row">
+              <div>
+                <label id="key_label">Enter Secret Key</label><input id="key_text" type="password">
+              </div>
+
+            </div>
+            <br>
+            <br>
+
+
+            <!-- second box -->
+            <div class="row">
+              <div class="col-25">
+                <label id="enc_text" for="subject">Encrypted Text</label>
+              </div>
+              <div class="col-76">
+                <textarea id="myInput" class="second_box" name="subject" style="height:200px"></textarea>
+              </div>
+            </div>
+
+            <!-- button area -->
+            <div class="row">
+              <div>
+                <input id="key" type="submit" onclick="encrypt()" value="Encrypt">
+              </div>
+              <div>
+                <button id="btn2" onclick="myFunction()">Copy text</button>
+
+              </div>
+            </div>
+
+      
+      </div>
+
+      <!-- key Generator -->
+      <div class="center">
+        <label id="pk_label">Secret Key Generator</label>
+        <br>
+        <button id="key_btn" onclick="secret_key()">Click Here</button>
+        <br>
+        <textarea id="private_key"></textarea>
+
+      </div>
+
+
+      <div class="center">
+
+        <h4 id="h4_2">Do Decryption</h4>
+        <!-- decryption process form -->
+        <!-- first box -->
+        <div class="row">
+          <div class="col-25">
+            <label id="encypt_text" for="subject">Enter Text</label>
+          </div>
+          <div class="col-75">
+            <textarea id="msg2" name="subject" placeholder="Enter Encrypted code to convert into plain_text..."
+              style="height:200px"></textarea>
+          </div>
+        </div>
+        <br>
+        <!-- key box -->
+        <div class="row">
+          <div>
+            <label id="key_label_2">Enter Secret Key</label><input id="key_text_2" type="password">
+          </div>
+
+        </div>
+        <br>
+        <br>
+
+
+        <!-- second box -->
+        <div class="row">
+          <div class="col-25">
+            <label id="decrypt_text" for="subject">Decrypted Text</label>
+          </div>
+          <div class="col-76">
+            <textarea id="myInput2" class="second_box" name="subject" style="height:200px"></textarea>
+          </div>
+        </div>
+
+        <!-- button area -->
+        <div class="row">
+          <div>
+            <input id="btn2_2" type="submit" onclick="decrypt()" value="Decrypt">
+          </div>
+          <div>
+            <button id="key2" onclick="myFunction()">Copy Text</button>
+            
+  <input type="reset" id="res" value="Reset">
+
+          </div>
+        </div>
+      </form>
+    </body>
+
+</html>
+
+<style>
+  h5{
+    font-family: 'Comic Sans MS';
+    font-weight: bold;
+  }
+</style>
+<!-- javascript -->
+<script>
+  // copyText function
+  function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("myInput");
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
+
+  // generate secret_key function
+  async function secret_key() {
+    let key = await eel.generate_key()();
+
+    console.log("Got this key:" + key);
+    document.getElementById("private_key").innerHTML = key;
+  }
+
+
+  $("#myform1").submit(function (e) {
+    e.preventDefault(); // <==stop page refresh==>
+  });
+
+  async function encrypt() {
+    // Inside a function marked 'async' we can use the 'await' keyword.
+    let plain_text = document.getElementById("msg1").value;
+    let secret_key = document.getElementById("key_text").value;
+    let text = await eel.AES_encrypt(plain_text, secret_key)(); // Must prefix call with 'await', otherwise it's the same syntax
+    console.log("Got this from Python: " + text);
+
+    document.getElementById("myInput").innerHTML = text;
+
+  }
+
+
+  async function decrypt() {
+    // Inside a function marked 'async' we can use the 'await' keyword.
+    let plain_text = document.getElementById("msg2").value;
+    let secret_key = document.getElementById("key_text_2").value;
+    console.log("decreypt function called");
+    let decrypted_text = await eel.AES_decrypt(plain_text, secret_key)();
+    // await eel.AES_decrypt(plain_text, secret_key)(); // Must prefix call with 'await', otherwise it's the same syntax
+    // console.log("Got this from Python: " + text);
+
+    document.getElementById("myInput2").innerHTML = decrypted_text;
+
+  }
+
+
+
+
+
+</script>
+<style>
+  #res{
+    color: white;
+    background-color: black;
+    position: fixed;
+    top:650px;
+    left: 630px;
+    width: 15%;
+  }
+</style>

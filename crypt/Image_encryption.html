@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--eel javascript-->
+  <script type="text/javascript" src="/eel.js"></script>
+  <script src="javascript/script.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/imagefile.css">
+  <title>Encryption</title>
+  <h2>Encryption</h2>
+</head>
+
+<body>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <div>
+
+    <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> -->
+    <!-- <nav class="navbar fixed-top navbar-light bg-light">
+      <a class="navbar-brand" href="/"><b>E-D-Cryption</b></a>
+
+      <center>
+        <h5>Image Encryption-Decryption System</h5>
+      </center>
+
+      <div class="topnav">
+        <a class="active" href="./crypt.html">ED-crypt</a>
+
+        <a href="index.html">LogOut</a>
+      </div>
+    </nav> -->
+    <header>
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <img src="css/pics/logo.png" height="100px">
+
+        <h5>Image Encryption-Decryption System</h5>
+        <div class="topnav">
+
+          <a href="crypt.html">ED-crypt</a>
+          <a href="index.html">Logout</a>
+        </div>
+      </nav>
+    </header>
+
+  </div>
+  <div>
+
+    <body>
+
+      <div class="center">
+
+        <form id="myform1">
+
+          <div class="center">
+
+            <!-- first box -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Image Encryption</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Encryption Done Successfully!
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="center">
+
+              <label id="path1_label">Enter Image Path:</label> <input type="text" id="path1">
+
+              <!-- <input type="file" id= "key_btn" > -->
+              <input type='file' id="img_btn1" onchange="readURL(this);" />
+              <br>
+              <label id="key_label">Enter Secret Key</label>
+              <input type="number" placeholder="enter key" id="key1">
+              <!-- <input type="image" id="private_key" name="filename"> -->
+              <label id="label2">Your Image:</label>
+              <img id="blah1" src="http://placehold.it/180" alt="your image" />
+              <br>
+              <button id="btn1" onclick="Encrypt_img();" class="btn btn-dark" data-target="#exampleModal" data-toggle="modal">Encrypt Image</button>
+
+              <input type="file" id="prev_btn1" onchange="readURL2(this);">
+              <label id="label3">Encrypted Image:</label>
+              <img id="blah2" src="http://placehold.it/180" alt="Encrypted image" />
+            </div>
+
+
+
+             <!-- Modal -->
+             <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+             <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel">Image Decryption</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                   </button>
+                 </div>
+                 <div class="modal-body">
+                   Decryption Done Successfully!
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                   <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                 </div>
+               </div>
+             </div>
+           </div>
+            <div class="center">
+
+              <!-- <input type="file" id= "key_btn" > -->
+              <input type='file' id="img_btn2" onchange="readURL3(this);" />
+              <br>
+              <label id="path_l2">Enter Image Path:</label> <input type="text" id="path2">
+              <!-- <input type="number" placeholder="enter key" id="key2"> -->
+              <!-- <input type="image" id="private_key" name="filename"> -->
+              <label id="label4">Encrypted Image:</label>
+
+              <img id="blah3" src="http://placehold.it/180" alt="Encrypted image" />
+              <button id="btn2" onclick="Decrypt_img();" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal2">Decrypt Image</button>
+
+              <input type="file" id="prev_btn2" onchange="readURL4(this);">
+              <label id="label5">Decrypted Image:</label>
+              <img id="blah4" src="http://placehold.it/180" alt="Decrypted image" />
+
+              <input type="reset" id="res" value="Reset">
+            </div>
+
+
+</div>
+</form>
+    </body>
+
+</html>
+<style>
+   #res{
+    color: white;
+    background-color: black;
+    position: fixed;
+    top:650px;
+    left: 630px;
+    width: 15%;
+  }
+</style>
+
+<!-- javascript -->
+<script>
+  // copyText function
+  function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("myInput");
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
+
+
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('#blah1')
+          .attr('src', e.target.result);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+
+  function readURL3(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('#blah3')
+          .attr('src', e.target.result);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  function readURL2(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('#blah2')
+          .attr('src', e.target.result);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  function readURL4(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('#blah4')
+          .attr('src', e.target.result);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  async function Encrypt_img() {
+    let key1 = document.getElementById("key1").value;
+    let path = document.getElementById("path1").value;
+    console.log("key:", key1);
+
+    console.log("path:", path);
+
+    await eel.image_encrypt(path, key1)();// Must prefix call with 'await', otherwise it's the same syntax
+    // console.log("Got this from Python: " + text);
+
+  }
+
+
+  async function Decrypt_img() {
+    let key1 = document.getElementById("key1").value;
+    let path = document.getElementById("path2").value;
+    console.log("key:", key1);
+    console.log("path:", path);
+
+    await eel.image_decrypt(path, key1)();// Must prefix call with 'await', otherwise it's the same syntax
+    // console.log("Got this from Python: " + text);
+
+  }
+
+
+
+  $("#myform1").submit(function (e) {
+    e.preventDefault(); // <==stop page refresh==>
+  });
+</script>

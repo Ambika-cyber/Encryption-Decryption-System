@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--eel javascript-->
+  <script type="text/javascript" src="/eel.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/home.css">
+  <title>Encryption-Decryption</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <img src="css/pics/logo.png" height="100px">
+
+      <h5>Welcome to Encryption-Decryption System</h5>
+      <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+  </main>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+
+  <div class="center">
+    <h1>Login </h1>
+    <form id="myform">
+      <div class="txt_field">
+        <input type="text" id="username" required> <span></span> <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" id="pass" required> <span></span><label>Password</label>
+      </div>
+      <div class="pass">Forgot Password?</div>
+      <input type="submit" id="btn" value="Login" onclick="validate()">
+      <div class="signup_link">
+        <span></span><br>
+        &nbsp; &nbsp; &nbsp;
+        Not a member? <a href="signup.html">SignUp</a>
+      </div>
+      <br>
+
+      <center>
+        <p id="data" style="font-size: 18px; color: blue;"></p>
+
+      </center>
+    </form>
+  </div>
+  <div class="center2">
+    <div class="text_over_image">
+      <h5> Encryption-Decryption System</h5>
+    </div>
+    <div class="box">
+
+      <img src="css/pics/img6.jpg" height="250" , width="300">
+
+    </div>
+  </div>
+
+
+
+  <!-- <p>Image with 50% opacity:</p>
+<img src="./img3.jpg" alt="Forest" class="img3" width="170" height="100"> -->
+</body>
+<script>
+  function validate() {
+    var form = document.getElementById("myform");
+    function handleForm(event) { event.preventDefault(); }
+
+    form.addEventListener('submit', handleForm);
+
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("pass").value;
+    eel.login(username, password)(callback);
+
+
+  }
+
+  function callback(c) {
+    if (c == 1) {
+      document.getElementById("data").innerHTML = " Login Successfully !";
+      location.href = 'crypt.html';
+    }
+    else {
+      document.getElementById("data").innerHTML = "Invalid username and password !";
+
+    }
+  }
+
+
+</script>
+
+</html>

@@ -1,0 +1,203 @@
+
+
+header img{
+    position: relative;
+    height: 100px;
+  
+    
+  }
+  
+  .topnav a.active {
+    background-color: #6658be;
+    color: white;
+  }
+body{
+    margin: 0;
+    padding: 0;
+      /* background-color: lightseagreen; */
+      background-image: url('pics/wall3.jpg'); 
+      height: 800px;  /* set a specified height */
+      width: 400px; 
+    background-position: center; /* Center the image*/
+    background-repeat: no-repeat; /* Do not repeat the image */
+     background-size: cover; /*Resize the background image to cover the entire container */ 
+   height: 100vh;
+   overflow: hidden;
+  }
+  
+.topnav a {
+    float: left;
+    color:rgb(14, 10, 73);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+/* Image Encryption */
+input[type=file]{
+    padding:10px;
+    
+    }
+    
+    #blah1{
+      position: fixed;
+      left:200px;
+      width: 300px;
+      height: 200px;
+      top:250px;
+    }
+    
+    
+    #path1_label{
+      position: fixed;
+      top:200px;
+      left: 50px;
+      font-family: 'Comic Sans MS';
+      font-weight: bold;
+    }
+    #label2{
+      position: fixed;
+      top:250px;
+      left:70px;
+      font-family: 'Comic Sans MS';
+      
+      font-weight: bold;
+    }
+
+
+    #label3{
+      position: fixed;
+      top:550px;
+      left:50px;
+      font-family: 'Comic Sans MS';
+      /* font-family: 'Comic Sans MS'; */
+      font-weight: bold;
+      
+    }
+    #path1{
+      position: fixed;
+      top:200px;
+      left:200px;
+      width: 300px;
+    }
+    
+    #blah2{
+      position: fixed;
+      left:200px;
+      width: 300px;
+      height: 200px;
+      top:550px;
+    }
+    
+    #img_btn1{
+    position: fixed;
+    left:200px;
+    top: 150px;
+  
+    
+    }
+    h5{
+      font-family: 'Comic Sans MS';
+      font-weight: bold;
+    }
+    
+    #btn1{
+      position: fixed;
+      left:200px;
+      top:480px; 
+    }
+    
+    #prev_btn1{
+      position: fixed;
+      left:340px;
+    
+      top:470px; 
+    }
+    #key_label{
+      position: fixed;
+      left:650px;
+      top:450px;
+      font-family: 'Comic Sans MS';
+      font-weight: bold;
+    }
+    #key1{
+      position: fixed;
+      left:650px;
+      top:480px; 
+      width: 200px;
+    }
+    
+    /* image Decryption */
+    #blah3{
+      position: fixed;
+      right:200px;
+      width: 300px;
+      height: 200px;
+      top:250px;
+    }
+    
+    #blah4{
+      position: fixed;
+      right:200px;
+      width: 300px;
+      height: 200px;
+      top:550px;
+    }
+    #btn2{
+      position: fixed;
+      right: 370px;
+      
+      top:480px;
+    }
+    #prev_btn2{
+      position: fixed;
+      right: 40px;
+      
+      top:470px;
+    }
+    
+    #key2{
+      position: fixed;
+      right: 250px;
+      top:415px;
+    }
+    #img_btn2{
+    position: fixed;
+    right:180px;
+    top:150px;
+    }
+    
+    #path_l2{
+      position: fixed;
+      top:200px;
+      right:520px;
+      font-family: 'Comic Sans MS';
+      font-weight: bold;
+    }
+    #label4{
+      position: fixed;
+      top:250px;
+      right:520px;
+      font-family: 'Comic Sans MS';
+      font-weight: bold;
+    }
+    #label5{
+      position: fixed;
+      top:550px;
+      right:520px;
+      font-family: 'Comic Sans MS';
+      font-weight: bold;
+    }
+    #path2{
+    position: fixed;
+    right:200px;
+    top:200px;
+    width: 300px;
+    }
