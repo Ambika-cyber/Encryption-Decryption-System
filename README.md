@@ -1,0 +1,2 @@
+# Encryption-Decryption-System
+Encryption-Decryption system is a GUI based application, which is developed for making secure message by using cryptography encryption decryption algorithms. Encryption is the process of converting normal message (plaintext) into meaningless message (Ciphertext). Whereas Decryption is the process of converting meaningless message (Ciphertext) into its original form (Plaintext).
