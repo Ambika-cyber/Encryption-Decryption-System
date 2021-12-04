@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/Ambika-cyber/Encryption-Decryption-System/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Welcome to Encryption-Decryption-System
 
-### Markdown
+This is B.Tech. **Major project** - I developed by me. It is a GUI based application, which is developed for making secure message by using cryptography **encryption decryption algorithms**. Encryption is the process of converting normal message (plaintext) into meaningless message (Ciphertext). Whereas Decryption is the process of converting meaningless message (Ciphertext) into its original form (Plaintext).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Project Objective 
 
-```markdown
-Syntax highlighted code block
+The project are to create a system that can **protect electronic data** (secret information) which Consist of encryption and decryption process and to fully design an encryption and decryption algorithm. 
+The objectives of this project is to understand how the Encryption and Decryption process and to make secure message by using encryption.
+Encryption-Decryption system is the process by which information can not be detect by the unauthorized person. The information can not be recognizing by the national foe because this system is using the process to encrypt data and decrypt data.
 
-# Header 1
-## Header 2
-### Header 3
+## Technology Used:
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ambika-cyber/Encryption-Decryption-System/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+-> Python 3.8
+-> Python eel for modern GUI
+-> Database : MySQL
+-> HTML, CSS , JavaScript
+-> Editor : Visual Studio Code 
