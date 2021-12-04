@@ -12,10 +12,10 @@ Encryption-Decryption system is the process by which information can not be dete
 
 ## Technology Used:
 
--> Python 3.8
--> Python eel for modern GUI
--> Database : MySQL
--> HTML, CSS , JavaScript
--> Editor : Visual Studio Code 
+1. Python 3.8
+2. Python eel for modern GUI
+3. Database : MySQL
+4. HTML, CSS , JavaScript
+5. Editor : Visual Studio Code 
 
 ### Developed by : Ambika Sadh
