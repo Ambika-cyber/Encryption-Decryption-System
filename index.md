@@ -17,3 +17,5 @@ Encryption-Decryption system is the process by which information can not be dete
 -> Database : MySQL
 -> HTML, CSS , JavaScript
 -> Editor : Visual Studio Code 
+
+### Developed by : Ambika Sadh
